@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <title>What I Learned</title>
+        
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <header>UNC Boot Camp: Week 1-Lesson 3</header>
+
+        <h2>CSS Box Model</h2>
+        
+        <p>Although I'm a little familiar with HTML and CSS, I learned quite a bit from the 
+            presentation that I missed this past Saturday (Dec 1st).
+        </p>
+
+        <p>The first new concept for me was the <strong>CSS box model</strong>, which describes the 
+            container-like composition of HTML elements. The image below demonstrates this model (note 
+            the boxes comprising the content, padding, border, and margin).
+        </p>
+        
+        <img src="https://sabe.io/classes/css/css-box-model-padding-border-margin/css-box-model.png" height="50%" width="50%">
+
+        <p>It is useful to use more specific tags, when appropriate, as they hold more meaningful
+            information. An example of this would be using the header tag instead of simply using a
+            div tag. Additionally, it is best to approach CSS section by section rather than tackling
+            the entire site at once.
+        </p>
+
+        <p>When it comes to defininig the parameters of elements like padding and margin, you always 
+            move clockwise (starting from the top): top, right, bottom, left. If you provide a single 
+            number, that number will apply to all four sides of the element. If you provide two numbers, 
+            the first will apply to the top and bottom, while the second will apply to the left and 
+            right sides.
+        </p>
+
+        <p>The order of your code is important, as children will inherit information from the parent. 
+            Additionally, the latest line of code take precedence over previous lines. Thus, if your 
+            code looks like this:
+        </p>
+        
+        <br>
+        
+        <p>div {</p>
+
+        <p>margin: 0;</p>
+        
+        <p>margin-bottom: 20px;</p>
+        
+        <p>}</p>
+        
+        <br>
+        
+        <p>Then the margin bottom will be 20px instead of 0px.
+        </p>
+
+        <br>
+
+        <h2>CSS Syntax</h2>
+
+        <p>In CSS, classes are called upon using <strong>.classname</strong>, IDs are called upon using 
+            <strong>#IDname</strong>, and elements simply use their name. It is best practice to use 
+            dashes to distinguish words in class selectors (e.g. .my-div). This is also known as kabob 
+            case. To distinguish words in ID selectors, use camelcase (e.g. #myDiv).
+        </p>
+
+        <br>
+        
+        <h2>Back to the Box Model</h2>
+
+        <h3>Floating</h3>
+
+        <p>Some element srae block elements by default, while others are inline (This can always be 
+            overridden using CSS). Floating transforms block elements to inline elements. Floats are 
+            necessary for building web layouts.
+        </p>
+
+        <p>Sometimes you will need to clear a float so that it does not interfere with your layout. 
+            This is done using <strong>clearfix</strong> as a class.
+        </p>
+
+        <p>The pseudoelement <em>::after</em> is used to style specific parts of an element. 
+            It adds a hidden HTML element after the content of the <strong>.clearfix</strong> element 
+            and clears the float. Using an * indicates that the parameters should be applied to everything.
+        </p>
+
+        <br>
+
+        <h2>CSS Positioning</h2>
+
+        <p>The positioning in CSS is <strong>static</strong> by default. This means that the element will stick to the 
+            normal page flow. Switching the boxes to <strong>relative</strong> will nudge the boxes in relation 
+            to their "original" location (top, left, bottom, or right). If you make the positioning <strong>absolute</strong>, 
+            then the boxes will be positioned relative to the nearest positioned ancestor. A <strong>fixed</strong> position 
+            will have exact coordinates in the browser window. 
+        </p>
+
+        <p>Layering with the <strong>Z-index</strong> allows you to layer elements on top of each other when they 
+        are positioned.
+        </p>
+
+        <br>
+
+        <h2>Miscellaneous List of Tidbits</h2>
+        <ul>
+            <li>Line-height: makes the line as tall as your text is (similar to line spacing in Word.</li>
+            <li>If you specify a value of zero, no units are necessary (As a scientist, I will always specify units)</li>
+            <li>Two ways to hide elements include (A) Display:"none" and (B) Visible:"hidden".</li>
+            <li>If you deploy a site without using relative file paths, then all of your links will fail!</li>
+        </ul>
+
+        <br><br>
+
+        <footer>Julie Ragsdale (c) 2018</footer>
+
+    </body>
+
+</html>
